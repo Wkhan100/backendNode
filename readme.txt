@@ -10,6 +10,15 @@
         "test":"", 
         "start": "nodemon server.js"
     }
+=> goto server.js file and this code to run on browser
+    `const express = require('express');
+     const app  = express(); 
+     const port = process.env.PORT || 3000;
+     const server = app.get('/', (req,res) =>{
+        res.send('Running!');
+    });
+    server.listen(port);
+    `
 -> create folder structure api-> routes-> orders.js file for different routes (crud operation)
 -> to define url endpoint: app.js or main.js
 -> error handling
